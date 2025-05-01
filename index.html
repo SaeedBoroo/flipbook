@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="شرکت آلفا نیروی آریا">
+    <meta name="description" content="کاتالوگ دیجیتال شرکت آلفا نیروی آریا؛ معرفی محصولات نورپردازی نما و تجهیزات روشنایی با کیفیت بالا.">
+    <meta name="keywords" content="کاتالوگ نورپردازی, روشنایی نما, محصولات آلفا نیرو, وال واشر, سان لایت, تجهیزات نورپردازی, نورپردازی نمای ساختمان">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta property="og:title" content="کاتالوگ دیجیتال | شرکت آلفا نیروی آریا">
+    <meta property="og:description" content="معرفی محصولات نورپردازی، وال‌واشر، سان‌لایت و تجهیزات روشنایی نما در قالب کتاب دیجیتال.">
+    <meta property="og:image" content="https://alfacomplex.com/page1.jpg">
+    <meta property="og:url" content="https://alfacomplex.com/catalog">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fa_IR">
+  <title>کاتالوگ دیجیتال | شرکت آلفا نیروی آریا</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/src/Style/stPageFlip.min.css">
+  <style>
+    @font-face {
+      font-family: iransans;
+      src: url(assets/IRANSansWeb(FaNum)_Medium.ttf);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: iransans;
+      direction: rtl;
+    }
+    #flipbook {
+      width: 90vw;
+      height: 90vh;
+      direction: rtl;
+    }
+    .stf__item {
+      background-color: transparent !important;
+    }
+    .stf__page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .stf__page img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .stf__page.--left {
+            border-left: 0;
+            border-right: solid 1px hsl(35, 20, 70);
+            box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+        }
+        .stf__page.--right {
+            border-right: 0;
+            border-left: solid 1px hsl(35, 20, 70);
+            box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+        }
+    h1{
+        color: #607D8B;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    #controls {
+      display: flex;
+      gap: 1rem;
+    }
+    #controls a {
+      background-color: #eee;
+    padding: 2px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    }
+    #controls a:hover {
+        border-color:#4caf50;
+    }
+  </style>
+</head>
+<body>
+    <h1>کاتالوگ محصولات شرکت آلفا نیروی آریا</h1>
+    <div id="controls">
+      <a onclick="flipPrev()">→ قبلی</a>
+      <a onclick="flipToPage()">شروع از اول</a>
+      <a onclick="flipNext()">بعدی ←</a>
+    </div>
+    <div id="flipbook"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+  <script>
+    let pageFlip;
+    document.addEventListener("DOMContentLoaded", function () {
+      const pageImages = [
+        "assets/img/page44.jpg",
+                "assets/img/page42.jpg",
+                "assets/img/page41.jpg",
+                "assets/img/page40.jpg",
+                "assets/img/page39.jpg",
+                "assets/img/page38.jpg",
+                "assets/img/page37.jpg",
+                "assets/img/page36.jpg",
+                "assets/img/page35.jpg",
+                "assets/img/page34.jpg",
+                "assets/img/page33.jpg",
+                "assets/img/page32.jpg",
+                "assets/img/page31.jpg",
+                "assets/img/page30.jpg",
+                "assets/img/page29.jpg",
+                "assets/img/page28.jpg",
+                "assets/img/page27.jpg",
+                "assets/img/page26.jpg",
+                "assets/img/page25.jpg",
+                "assets/img/page24.jpg",
+                "assets/img/page23.jpg",
+                "assets/img/page22.jpg",
+                "assets/img/page21.jpg",
+                "assets/img/page20.jpg",
+                "assets/img/page19.jpg",
+                "assets/img/page18.jpg",
+                "assets/img/page17.jpg",
+                "assets/img/page16.jpg",
+                "assets/img/page15.jpg",
+                "assets/img/page14.jpg",
+                "assets/img/page13.jpg",
+                "assets/img/page12.jpg",
+                "assets/img/page11.jpg",
+                "assets/img/page10.jpg",
+                "assets/img/page09.jpg",
+                "assets/img/page08.jpg",
+                "assets/img/page07.jpg",
+                "assets/img/page06.jpg",
+                "assets/img/page05.jpg",
+                "assets/img/page04.jpg",
+                "assets/img/page03.jpg",
+                "assets/img/page02.jpg",
+                "assets/img/page01.jpg",
+                "assets/img/page00.jpg"
+      ];
+      const book = document.getElementById("flipbook");
+      pageFlip = new St.PageFlip(book, {
+        width: 1200,
+        height: 800,
+        size: "stretch",
+        minWidth: 315,
+        maxWidth: window.innerWidth,
+        minHeight: 420,
+        maxHeight: window.innerHeight,
+        drawShadow: true,
+        flippingTime: 700,
+        useMouseEvents: true,
+        startPage: pageImages.length - 1,
+        showCover: true,
+        mobileScrollSupport: false
+      });
+      const pages = pageImages.map(src => ({
+        type: "image",
+        src: src
+      }));
+
+      pageFlip.loadFromImages(pages.map(p => p.src));
+    });
+    
+      function flipPrev() {
+          pageFlip.flipNext();
+      }
+      function flipToPage() {
+          pageFlip.flip(43);
+      }
+      function flipNext() {
+          pageFlip.flipPrev();
+      }
+  </script>
+</body>
+</html>
